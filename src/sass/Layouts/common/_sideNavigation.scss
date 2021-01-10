@@ -1,0 +1,54 @@
+.sideNavigation-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $white;
+  height: 100%;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include responsive-for(md) {
+    display: none;
+  }
+  .sideNav-wrapper {
+    padding: 20px 10px;
+
+    .sideNav {
+      font-family: $avertaBold;
+      font-size: 28px;
+      color: $primarycolor;
+    }
+
+    .menu {
+      padding: 150px 0;
+
+      .item-menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px 0;
+        // justify-content: center;
+        .icons {
+          padding-right: 5px;
+        }
+        .name {
+          cursor: pointer;
+          a {
+            text-decoration: none;
+            font-family: $avertaSemiBold;
+            font-size: 16px;
+            color: $black;
+          }
+        }
+        .name:active {
+          color: $black;
+        }
+        .name:hover {
+          color: $black;
+        }
+      }
+    }
+  }
+}

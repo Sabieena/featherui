@@ -1,0 +1,243 @@
+.chatPage-wrapper {
+  display: flex;
+  padding-bottom: 200px;
+  @include responsive-for(md) {
+    display: column;
+  }
+  .left-section {
+    padding-right: 30px;
+    @include responsive-for(md) {
+      padding: 10px;
+    }
+  }
+  .right-section {
+    width: 100%;
+  }
+}
+
+//Chat Page list component
+.listComponent-wrapper {
+  .listComponent {
+    .list {
+      display: flex;
+      align-items: center;
+      border-bottom: 2px solid $light_black;
+      padding-bottom: 15px;
+      margin-top: 15px;
+      .avatar {
+        height: 40px;
+        width: 40px;
+        align-self: start;
+        .avatar-icon {
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          background-color: blue;
+        }
+      }
+      .content {
+        padding: 0 15px;
+        .title {
+          font-family: $avertaSemiBold;
+        }
+        .description {
+          font-family: $avertaLight;
+        }
+
+        .time {
+          display: flex;
+          padding: 10px 0;
+          font-family: $avertaLight;
+          font-size: 14px;
+          color: $light_black;
+          .clock {
+          }
+          .date {
+            padding: 0 10px;
+          }
+        }
+      }
+      .deleteIcon {
+        height: 51px;
+        width: 51px;
+
+        .delete {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          color: red;
+          background-color: lighten(red, 40%);
+
+          &:hover {
+            background-color: lighten(red, 30%);
+          }
+        }
+      }
+    }
+    .list:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+//CHAT PAGE TOP CARD COMPONENT
+.topCard-wrapper {
+  padding: 20px;
+  border: 1px solid $light_black;
+  border-radius: 20px;
+  .topCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .content {
+      .title {
+        font-family: $avertaSemiBold;
+      }
+      .description {
+        font-family: $avertaLight;
+      }
+    }
+    .topcard-button {
+      width: 200px;
+    }
+  }
+}
+
+.documentPage-documentTab {
+  padding: 10px 0;
+}
+
+//DOCUMENT TAB COMPONENT CHAT PAGE SYLES
+
+.documentTab-wrapper {
+  .documentTab {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid $light_black;
+
+    @include responsive-for(md) {
+      flex-direction: column;
+    }
+    .left {
+      display: flex;
+      align-items: center;
+      .checkbox {
+        padding-right: 7px;
+      }
+      .center {
+        display: flex;
+        .icon {
+        }
+        .content {
+          .title {
+            font-family: $avertaSemiBold;
+          }
+          .description {
+            font-family: $avertaLight;
+          }
+        }
+      }
+    }
+    .right {
+      display: flex;
+      @include responsive-for(md) {
+        padding: 10px;
+      }
+    }
+  }
+  .documentTab:last-child {
+    border-bottom: none;
+  }
+}
+
+//CHAT COMPONENT
+.chatPage-wrapper {
+  position: relative;
+  .chat {
+    flex: 1;
+    position: relative;
+    .chatContent {
+      display: flex;
+      padding: 10px 0;
+      width: 100%;
+      &.myMessage {
+        right: 15px;
+        flex: 1;
+        justify-content: flex-start;
+        flex-direction: row-reverse;
+      }
+      .avatar {
+        height: 50px;
+        width: 50px;
+        img {
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+        }
+      }
+
+      .content {
+        padding: 0 15px;
+        width: 50%;
+        .name {
+          font-family: $avertaSemiBold;
+          color: $primarycolor;
+          padding-bottom: 5px;
+
+          &.myMessage {
+            text-align: right;
+          }
+        }
+        .message {
+          padding: 5px 20px 5px 10px;
+          background-color: $grey;
+          border-radius: 0 10px 10px 10px;
+          font-family: $avertaLight;
+          &.myMessage {
+            border-radius: 10px 0 10px 10px;
+            background-color: lighten($primarycolor, 40%);
+          }
+        }
+        .dateTime {
+          display: flex;
+          padding: 8px;
+          &.myMessage {
+            float: right;
+          }
+          .time {
+            font-family: $avertaLight;
+            font-size: 12px;
+            padding: 0 10px;
+          }
+          .date {
+            font-family: $avertaLight;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  input {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    width: 95%;
+    height: 40px;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid $grey;
+    text-indent: 10px;
+  }
+  input[type="text"]:focus {
+    border-radius: 10px;
+    border: 1px solid $grey;
+  }
+}

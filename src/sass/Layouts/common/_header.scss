@@ -1,0 +1,36 @@
+.header-container {
+  padding-top: 25px;
+  padding-bottom: 40px;
+  .header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .action-button {
+      width: 140px;
+      padding: 0 10px;
+    }
+    .support {
+      width: 100px;
+      padding: 0 10px;
+    }
+    .notification {
+      padding: 0 10px;
+      cursor: pointer;
+    }
+
+    .comment {
+      padding: 0 10px;
+      cursor: pointer;
+    }
+    .avatar {
+      padding: 0 10px;
+      img {
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+    }
+  }
+}

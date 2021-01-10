@@ -1,0 +1,29 @@
+.tabs-container {
+  .tabs {
+    list-style-type: none;
+    display: flex;
+    border-bottom: 2px solid #e1e1e1;
+
+    .tabs-header {
+      padding: 20px 20px;
+      cursor: pointer;
+      font-family: $avertaSemiBold;
+      font-size: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .active {
+      border-bottom: 4px solid $primarycolor;
+    }
+  }
+
+  .tabs-content {
+    padding: 10px 20px;
+
+    .tabs-content-children {
+      transition: 0.3s ease-in;
+    }
+  }
+}

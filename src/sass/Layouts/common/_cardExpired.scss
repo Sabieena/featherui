@@ -1,0 +1,29 @@
+.cardExpired-wrapper {
+  padding: 30px 0;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  background-color: lighten($red, 20%);
+  .expired {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include responsive-for(md) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    p {
+      font-family: $avertaLight;
+      padding: 0 90px 0 0;
+      text-align: center;
+
+      @include responsive-for(md) {
+        padding: 10px;
+      }
+    }
+    .expiredbutton {
+      width: 100px;
+    }
+  }
+}

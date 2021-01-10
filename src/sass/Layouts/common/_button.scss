@@ -1,0 +1,70 @@
+// BUTTON STYLES
+
+.button {
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 6px 0px;
+  border-radius: 4px;
+  font-size: $extrathin;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+
+  &.main {
+    background: $primarycolor;
+    color: white;
+    border: 2px solid $primarycolor;
+    border-radius: 12px;
+    transition: background 0.4s, border-color 0.8s;
+    @include responsive-for(md) {
+      font-size: 14px;
+    }
+
+    &:hover {
+      background: darken($primarycolor, 4%);
+      border-color: darken($primarycolor, 4%);
+    }
+
+    &:active {
+      background: darken($primarycolor, 10%);
+      border-color: darken($primarycolor, 10%);
+    }
+  }
+
+  &.inverted {
+    background: $white;
+    color: $primarycolor;
+    border: 1.5px solid $primarycolor;
+    border-radius: 12px;
+    transition: background 0.4s, border-color 0.8s;
+
+    &:hover {
+      background: darken($white, 4%);
+      border-color: darken($primarycolor, 4%);
+    }
+
+    &:active {
+      background: darken($white, 10%);
+      border-color: darken($white, 10%);
+    }
+  }
+
+  &.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.disabled {
+    border-color: lighten($primarycolor, 40%);
+    background-color: $light_grey;
+    color: lighten($green, 40%) !important;
+    &:hover {
+      border-color: lighten($primarycolor, 40%);
+      background-color: $light_grey;
+    }
+
+    &:active {
+    }
+  }
+}
